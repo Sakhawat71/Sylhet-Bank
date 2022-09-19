@@ -8,3 +8,11 @@ body{
     border-radius: 10px;
     box-shadow: 5px 5px 10px gray;
 }
+#transection-area{
+    display: none;
+}
+.mony{
+    margin: 0 20px;
+    border-radius: 10px;
+    color: white;
+}

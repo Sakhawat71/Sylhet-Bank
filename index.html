@@ -9,18 +9,58 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <section id="login-aria">
+    <section id="login-area">
         <h1 class="text-center">Welcome to Sylhet Bank</h1>
 
-        <div class="submit-aria">
+        <div class="submit-area">
             <h4>Login</h4>
             <input type="email" class="form-control" name="" id="" placeholder="Email">
             <br>
             <input type="password" class="form-control" name="" id="" placeholder="Password">
             <br>
-            <button id="LoginBtn" class="btn btn-success">Enter</button>
+            <button id="loginBtn" class="btn btn-success">Enter</button>
         </div>
 
     </section>
+
+
+                    <!--transection area -->
+
+
+    <section class="mt-5" id="transection-area">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="bg-info p-3 mony">
+                    <h5>Deposit</h5>
+                    <h2>$00</h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bg-success p-3 mony">
+                    <h5>Withdraw</h5>
+                    <h2>$00</h2>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="bg-danger p-3 mony">
+                    <h5>Balance</h5>
+                    <h2>$1000</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        const button1 = document.getElementById("loginBtn");
+        button1.addEventListener("click", function(){
+            const loginArea = document.getElementById("login-area");
+            loginArea.style.display = "none";
+            
+            const transection = document.getElementById("transection-area");
+            transection.style.display = "block";
+        });
+
+    </script>
 </body>
 </html>
