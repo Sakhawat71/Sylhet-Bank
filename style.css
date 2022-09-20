@@ -1,13 +1,13 @@
 body{
     padding: 100px;
 }
-.submit-aria{
+.submit-area{
     margin-top: 50px;
     padding: 40px;
-    border: 1px solid black;
     border-radius: 10px;
     box-shadow: 5px 5px 10px gray;
 }
+
 #transection-area{
     display: none;
 }
@@ -15,4 +15,9 @@ body{
     margin: 0 20px;
     border-radius: 10px;
     color: white;
+}
+.dep-wit{
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px gray;
 }

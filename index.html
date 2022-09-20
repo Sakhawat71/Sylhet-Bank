@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sylhet Bank</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <section id="login-area">
         <h1 class="text-center">Welcome to Sylhet Bank</h1>
@@ -24,7 +27,7 @@
     </section>
 
 
-                    <!--transection area -->
+    <!--transection area -->
 
 
     <section class="mt-5" id="transection-area">
@@ -48,19 +51,40 @@
                 </div>
             </div>
         </div>
+
+        <div class="row mt-5">
+            <div class="col-md-6">
+                <div class="dep-wit">
+                    <h4>Deposit</h4>
+                    <input type="text" class="form-control" placeholder="$ amount you want to deposit">
+                    <br>
+                    <button class="btn btn-success" >Deposit</button>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="dep-wit">
+                    <h4>Withdraw</h4>
+                    <input type="text" class="form-control" name="" id="" placeholder="$ amount you want to Withdraw">
+                    <br>
+                    <button class="btn btn-success" >Withdraw</button>
+                </div>
+            </div>
+        </div>
     </section>
 
 
     <script>
         const button1 = document.getElementById("loginBtn");
-        button1.addEventListener("click", function(){
+        button1.addEventListener("click", function () {
             const loginArea = document.getElementById("login-area");
             loginArea.style.display = "none";
-            
+
             const transection = document.getElementById("transection-area");
             transection.style.display = "block";
         });
 
     </script>
 </body>
+
 </html>
