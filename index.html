@@ -12,6 +12,9 @@
 </head>
 
 <body>
+
+    <!-- login area  -->
+
     <section id="login-area">
         <h1 class="text-center">Welcome to Sylhet Bank</h1>
 
@@ -35,7 +38,7 @@
             <div class="col-md-4">
                 <div class="bg-info p-3 mony">
                     <h5>Deposit</h5>
-                    <h2>$00</h2>
+                    <h2>$<span id="currentDeposit">00</span></h2>
                 </div>
             </div>
             <div class="col-md-4">
@@ -56,9 +59,10 @@
             <div class="col-md-6">
                 <div class="dep-wit">
                     <h4>Deposit</h4>
-                    <input type="text" class="form-control" placeholder="$ amount you want to deposit">
+                    <input id="depositAmount" type="text" class="form-control"
+                        placeholder="$ amount you want to deposit">
                     <br>
-                    <button class="btn btn-success" >Deposit</button>
+                    <button id="addDeposit" class="btn btn-success">Deposit</button>
                 </div>
             </div>
 
@@ -67,7 +71,7 @@
                     <h4>Withdraw</h4>
                     <input type="text" class="form-control" name="" id="" placeholder="$ amount you want to Withdraw">
                     <br>
-                    <button class="btn btn-success" >Withdraw</button>
+                    <button id="withdraw" class="btn btn-success">Withdraw</button>
                 </div>
             </div>
         </div>
@@ -75,6 +79,7 @@
 
 
     <script>
+        // login Button event handler 
         const button1 = document.getElementById("loginBtn");
         button1.addEventListener("click", function () {
             const loginArea = document.getElementById("login-area");
@@ -82,6 +87,23 @@
 
             const transection = document.getElementById("transection-area");
             transection.style.display = "block";
+        });
+
+        //Deposit button event handler
+
+        const depositBtn = document.getElementById("addDeposit");
+        depositBtn.addEventListener('click', function () {
+
+            const depositAmount = document.getElementById("depositAmount").value;
+            const depositNumber = parseFloat(depositAmount);
+
+            const currentDeposit = document.getElementById("currentDeposit").innerText;
+            const currentDepNumber = parseFloat(currentDeposit);
+
+            var totolDeposit = depositNumber + currentDepNumber;
+            document.getElementById("currentDeposit").innerText= totolDeposit;
+
+            document.getElementById("depositAmount").value= "";
         });
 
     </script>
